@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>Pizza Home Page</title>
+  <title>Menu Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Flavors&display=swap">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  h1 {
+    font-family: 'Flavors', cursive;
+    font-size: 60px
+  }
+  </style>
 </head>
 
 <body>
+  <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+      <!-- Brand/logo -->
+      <a class="navbar-brand" href="home-page.html" target="_parent">
+        <img src="logo.jpg" alt="home button"  class="rounded-circle" style="width:50px;">
+      </a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="other-pages/delivery.html" target="_parent">Delivery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="other-pages/menu.html" target="_parent">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="other-pages/event.html" target="_parent">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="other-pages/about.html" target="_parent">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <br />
+    <br />
+    <br />
+
+    <div class="jumbotron">
+      <h1 class="text-center">Menu</h1>
+    </div>
+  </div>
 </body>
 </html>
