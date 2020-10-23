@@ -9,7 +9,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <style>
+</head>
+<style>
   h1 {
     font-family: 'Flavors', cursive;
     font-size: 60px
@@ -18,142 +19,211 @@
     margin-right: 0;
     margin-left: 0;
   }
-  </style>
-</head>
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  #main {
+    transition: margin-left .5s;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  .container {
+    display: inline-block;
+    cursor: pointer;
+  }
 
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+</style>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-    <!-- Brand/logo -->
-    <a class="navbar-brand">
-      <img src="photos/logo.jpg" alt="home button" class="rounded-circle" style="width:50px;">
-    </a>
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="other-pages/delivery.html" target="_parent">Delivery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="other-pages/menu.html" target="_parent">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="other-pages/events.html" target="_parent">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="other-pages/info.html" target="_parent">Info</a>
-        </li>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Delivery</a>
+    <a href="#">Events</a>
+    <a href="#">Info</a>
+    <a href="#">Contact</a>
+  </div>
+
+<div id="main">
+    <!-- Menu button -->
+    <div class="container-fluid" onclick="openNav()">
+      <div class="container" onclick="menuAnimation(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+    function menuAnimation(x) {
+      x.classList.toggle("change");
+    }
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+
+    <!-- Carousel -->
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
       </ul>
-    </div>
-  </nav>
+      <!-- The slideshow-->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="photos/restaurant.jpg" alt="outdoors" width=100% height=auto>
+        </div>
+        <div class="carousel-item">
+          <img src="photos/pizza1.jpg" alt="custom pizza" width=100% height=auto>
+        </div>
+        <div class="carousel-item">
+          <img src="photos/piaya.jpg" alt="events" width=100% height=auto>
+        </div>
+      </div>
 
-  <!-- Carousel -->
-  <div id="carousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#carousel" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel" data-slide-to="1"></li>
-      <li data-target="#carousel" data-slide-to="2"></li>
-    </ul>
-    <!-- The slideshow-->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="photos/restaurant.jpg" alt="outdoors" width=100% height=auto>
-      </div>
-      <div class="carousel-item">
-        <img src="photos/pizza1.jpg" alt="custom pizza" width=100% height=auto>
-      </div>
-      <div class="carousel-item">
-        <img src="photos/piaya.jpg" alt="events" width=100% height=auto>
-      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#carousel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
     </div>
 
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#carousel" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#carousel" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-  </div>
-
-  <!-- Line breaks for formatting -->
-  <br />
-  <br />
-  <br />
-
-  <div class="container">
-    <!--About Chef -->
-    <div class="jumbotron">
-      <h1>Chef</h1>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <img class="img-thumbnail" src="photos/chef.jpg" alt="chef image" style="width:100%" />
-      </div>
-      <div class="col-md-6">
-        <br />
-        <h4 class="display-4 text-dark">George Ellis<h4>
-        <br />
-        <p class="lead text-info">George is a world renowned pizza chef with a
-          dozen pizza restaurants around the world each with innumerable 5 star yelp
-          reviews. Pepe's pizza is his most recent addition to his franchise. His
-          countless years of practice making New York style pizza, is the reason
-          he is know as the best pizza chef of this decade.
-        </p>
-        <a href="other-pages/info.html" class="btn btn-info" role="button">More Info</a>
-      </div>
-    </div>
-
+    <!-- Line breaks for formatting -->
     <br />
     <br />
-    <!-- <img src="photos/divider.png" alt="divider" width=300px height=auto> -->
+    <br />
 
-    <div class="row">
-      <div class="col-md-4">
-        <div class="jumbotron">
-          <h1>Events</h1>
-        </div>
-        <p class="lead text-info">
-          We host events every week and you can reserve dates to host your own
-          personal events. To learn more visit our
-          <a href="other-pages/events.html">events page</a>.
-        </p>
-        <a href="other-pages/events.html" class="btn btn-info" role="button">Events</a>
+    <div class="container-fluid">
+      <!--About Chef -->
+      <div class="jumbotron">
+        <h1>Chef</h1>
       </div>
-      <div class="col-md-4">
-        <div class="jumbotron">
-          <h1>Menu</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-thumbnail" src="photos/chef.jpg" alt="chef image" style="width:100%" />
         </div>
-        <p class="lead text-info">
-          We have a vast pizza menu with other items. All ingredients are of the
-          best quality and are all fresh. None of our ingredients are processed.
-          We also have a custom pizza menu, with almost infinite different possible
-          combinations. Visit our <a href="other-pages/menu.html">menu page</a>
-          for more information.
-        </p>
-        <a href="other-pages/menu.html" class="btn btn-info" role="button">Menu</a>
+        <div class="col-md-6">
+          <br />
+          <h4 class="display-4 text-dark">George Ellis<h4>
+          <br />
+          <p class="lead text-info">George is a world renowned pizza chef with a
+            dozen pizza restaurants around the world each with innumerable 5 star yelp
+            reviews. Pepe's pizza is his most recent addition to his franchise. His
+            countless years of practice making New York style pizza, is the reason
+            he is know as the best pizza chef of this decade.
+          </p>
+          <a href="other-pages/info.html" class="btn btn-info" role="button">More Info</a>
+        </div>
       </div>
-      <div class="col-md-4">
-        <div class="jumbotron">
-          <h1>Delivery</h1>
+
+      <br />
+      <br />
+      <!-- <img src="photos/divider.png" alt="divider" width=300px height=auto> -->
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="jumbotron">
+            <h1>Events</h1>
+          </div>
+          <p class="lead text-info">
+            We host events every week and you can reserve dates to host your own
+            personal events. To learn more visit our
+            <a href="other-pages/events.html">events page</a>.
+          </p>
+          <!--<a href="other-pages/events.html" class="btn btn-info" role="button">Events</a>-->
         </div>
-        <p class="lead text-info">
-          We currently do not support delivery but hope to soon. Once delivery is
-          made avaliable you will be able to see on our
-          <a href="other-pages/delivery.html">delivery page</a>. Note that we
-          will only be able to delivery within
-          <a href="https://www.google.com/maps/place/San+Diego,+CA/@32.8242404,-117.389167,10z/data=!3m1!4b1!4m5!3m4!1s0x80d9530fad921e4b:0xd3a21fdfd15df79!8m2!3d32.715738!4d-117.1610838" target="_blank">
-            San Diego.
-          </a>
-        </p>
-        <a href="other-pages/delivery.html" class="btn btn-info" role="button">Delivery</a>
+        <div class="col-md-4">
+          <div class="jumbotron">
+            <h1>Menu</h1>
+          </div>
+          <p class="lead text-info">
+            We have a vast pizza menu with other items. All ingredients are of the
+            best quality and are all fresh. None of our ingredients are processed.
+            We also have a custom pizza menu, with almost infinite different possible
+            combinations. Visit our <a href="other-pages/menu.html">menu page</a>
+            for more information.
+          </p>
+          <!--<a href="other-pages/menu.html" class="btn btn-info" role="button">Menu</a>-->
+        </div>
+        <div class="col-md-4">
+          <div class="jumbotron">
+            <h1>Delivery</h1>
+          </div>
+          <p class="lead text-info">
+            We currently do not support delivery but hope to soon. Once delivery is
+            made avaliable you will be able to see on our
+            <a href="other-pages/delivery.html">delivery page</a>. Note that we
+            will only be able to delivery within
+            <a href="https://www.google.com/maps/place/San+Diego,+CA/@32.8242404,-117.389167,10z/data=!3m1!4b1!4m5!3m4!1s0x80d9530fad921e4b:0xd3a21fdfd15df79!8m2!3d32.715738!4d-117.1610838" target="_blank">
+              San Diego.
+            </a>
+          </p>
+          <!--<a href="other-pages/delivery.html" class="btn btn-info" role="button">Delivery</a>-->
+        </div>
       </div>
     </div>
-  </div>
+  </div?
 </body>
 </html>
