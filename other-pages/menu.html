@@ -6,57 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Flavors&display=swap">
+  <link rel="stylesheet" href="../mystylesheet.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <style>
-  h1 {
-    font-family: 'Flavors', cursive;
-    font-size: 60px
-  }
-  </style>
 </head>
 
 <body>
-  <div class="container">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
-      <!-- Brand/logo -->
-      <a class="navbar-brand" href="../home-page.html" target="_parent">
-        <img src="../photos/logo.jpg" alt="home button"  class="rounded-circle" style="width:50px;">
-      </a>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="../home-page.html" target="_self">Home</a>
+    <a href="delivery.html" target="_self">Delivery</a>
+    <a href="events.html" target="_self">Events</a>
+    <a href="info.html" target="_self">Info</a>
+  </div>
 
-      <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Navbar links -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="../other-pages/delivery.html" target="_parent">Delivery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="../other-pages/menu.html" target="_parent">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../other-pages/events.html" target="_parent">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../other-pages/info.html" target="_parent">Info</a>
-          </li>
-        </ul>
+  <div id="main">
+    <!-- Menu button -->
+    <div class="container-fluid" onclick="openNav()">
+      <div class="container" onclick="menuAnimation(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
       </div>
-    </nav>
-
-    <br />
-    <br />
-    <br />
-
-    <div class="jumbotron">
-      <h1 class="text-center">Menu</h1>
     </div>
+
+    <!-- Scripts -->
+    <script>
+    function menuAnimation(x) {
+      x.classList.toggle("change");
+    }
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
   </div>
 </body>
 </html>

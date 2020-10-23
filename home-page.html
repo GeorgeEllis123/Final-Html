@@ -6,94 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Flavors&display=swap">
+  <link rel="stylesheet" href="mystylesheet.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<style>
-  h1 {
-    font-family: 'Flavors', cursive;
-    font-size: 60px
-  }
-  .no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  body {
-    font-family: "Lato", sans-serif;
-  }
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  #main {
-    transition: margin-left .5s;
-  }
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-  .container {
-    display: inline-block;
-    cursor: pointer;
-  }
-
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-
-  .change .bar2 {opacity: 0;}
-
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
-</style>
 <body>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">Delivery</a>
-    <a href="#">Events</a>
-    <a href="#">Info</a>
-    <a href="#">Contact</a>
+    <a href="other-pages/menu.html" target="_self">Menu</a>
+    <a href="other-pages/delivery.html" target="_self">Delivery</a>
+    <a href="other-pages/events.html" target="_self">Events</a>
+    <a href="other-pages/info.html" target="_self">Info</a>
   </div>
 
-<div id="main">
+  <div id="main">
     <!-- Menu button -->
     <div class="container-fluid" onclick="openNav()">
       <div class="container" onclick="menuAnimation(this)">
@@ -224,6 +151,6 @@
         </div>
       </div>
     </div>
-  </div?
+  </div>
 </body>
 </html>
