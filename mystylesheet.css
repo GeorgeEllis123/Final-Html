@@ -25,13 +25,14 @@ h1 {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #ffffff;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .sidenav .closebtn {
@@ -88,7 +89,7 @@ div.sticky {
   transition: .5s;
 }
 
-#centeredNavInfo {
+.centeredNavInfo {
   float: none;
   position: absolute;
   top: 50%;
@@ -97,4 +98,31 @@ div.sticky {
   font-size: 50px;
   color: white;
   font-family: 'Alex Brush', cursive;
+}
+
+.rightNavInfo {
+  float: right;
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  font-family: "Lato", sans-serif
+  padding: 14px 16px;
+}
+
+.btn {
+  border: 2px solid black;
+  color: black;
+  padding: 5px 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.light {
+  border-color: #ffffff;
+  color: white;
+}
+
+.light:hover {
+  background-color: #ffffff;
+  color: black;
 }
