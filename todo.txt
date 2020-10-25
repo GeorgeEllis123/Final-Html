@@ -1,0 +1,6 @@
+- scale menu button
+- change photos
+- other pages (update navbar and add content)
+- make navbar not messed up on phone
+- lock menu button position when pushing text
+- customize reviews bar
