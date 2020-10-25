@@ -87,6 +87,7 @@ div.sticky {
 
 #customNav {
   transition: .5s;
+  border-bottom: 1px solid white;
 }
 
 .centeredNavInfo {
