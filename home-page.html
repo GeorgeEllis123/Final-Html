@@ -13,8 +13,8 @@
   <script src="scripts.js"></script>
 </head>
 <body>
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="mySidenav" class="sidenav" style="z-index:9999">
+    <br />
     <a>Home</a>
     <a href="other-pages/menu.html" target="_self">Menu</a>
     <a href="other-pages/delivery.html" target="_self">Delivery</a>
@@ -22,20 +22,19 @@
     <a href="other-pages/info.html" target="_self">Info</a>
   </div>
 
-  <div id="main">
-    <!-- Navbar buttons -->
-    <div class="container-fluid sticky" id="customNav">
-      <div class="btn" onclick="menuAnimation(this); openNav()" role="button">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-      <h2 class="centeredNavInfo">Pepe's Pizza</h2>
-      <a href="other-pages/contact.html" class="rightNavInfo">
-         <button class="btn light" style="font-size:1.75vw">Contact</button>
-      </a>
+  <!-- Navbar -->
+  <div class="container-fluid sticky" id="customNav">
+    <div class="btn" onclick="menuAnimation(this); changeNav()" role="button">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
     </div>
-
+    <h2 class="centeredNavInfo">Pepe's Pizza</h2>
+    <a href="other-pages/contact.html" class="rightNavInfo">
+       <button class="btn light" style="font-size:1.75vw">Contact</button>
+    </a>
+  </div>
+  <div id="main">
     <!-- Carousel -->
     <div id="carousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -73,7 +72,7 @@
       <h1 class="text-light">Chef</h1>
       <div class="row">
         <div class="col-md-4">
-          <img src="photos/chef.jpg" alt="chef image" style="width:100%;border:3px solid #ffffff" />
+          <img src="photos/chef.jpg" alt="chef image" class="rounded" style="width:100%;border:3px solid #ffffff" />
         </div>
         <div class="col-md-8">
           <br />
@@ -91,7 +90,6 @@
       <br />
       <br />
     </div>
-      <!-- <img src="photos/divider.png" alt="divider" width=300px height=auto> -->
 
     <div class="container-fluid" style="background-color:white">
       <br />
@@ -134,6 +132,7 @@
       <br />
       <br />
     </div>
+
     <div class="container-fluid" style="background-color:black">
       <!--About Chef -->
       <br />
@@ -182,10 +181,11 @@
       <br />
       <br />
     </div>
+
     <div class="container-fluid"  style="max-width:800px;padding:20px;margin:0 auto;background-color:white">
       <br />
       <br />
-      <h1>User Rating</h1>
+      <h1>Customer Rating</h1>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
