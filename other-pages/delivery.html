@@ -14,24 +14,29 @@
 </head>
 
 <body>
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="mySidenav" class="sidenav" style="z-index:9999">
+    <br />
     <a href="../home-page.html" target="_self">Home</a>
     <a href="menu.html" target="_self">Menu</a>
+    <a>Delivery</a>
     <a href="events.html" target="_self">Events</a>
     <a href="info.html" target="_self">Info</a>
   </div>
 
-  <div id="main">
-    <!-- Menu button -->
-    <div class="container-fluid sticky" id="customNav" onclick="openNav()">
-      <div class="container" onclick="menuAnimation(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-      <h2 id="centeredNavInfo">Delivery</h2>
+  <!-- Navbar -->
+  <div class="container-fluid sticky" id="customNav">
+    <div class="btn" onclick="menuAnimation(this); changeNav()" role="button">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
     </div>
+    <h2 class="centeredNavInfo">Pepe's Pizza</h2>
+    <a href="other-pages/contact.html" class="rightNavInfo">
+       <button class="btn light" style="font-size:1.75vw">Contact</button>
+    </a>
+  </div>
+
+  <div id="main">
   </div>
 </body>
 </html>
