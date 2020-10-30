@@ -295,3 +295,11 @@ body {
     display: none;
   }
 }
+
+.bottom-border {
+  border-bottom:2px solid #111111
+}
+
+.right-border {
+  border-right:2px solid #111111
+}
