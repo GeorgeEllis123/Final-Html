@@ -13,8 +13,8 @@
   <script src="../scripts.js"></script>
 </head>
 
-<body>
-  <div id="mySidenav" class="sidenav right-border" style="z-index:9999">
+<body style="height:100%;margin:0;background-color:#ccc">
+  <div id="mySidenav" class="sidenav" style="z-index:9999">
     <br />
     <a href="../home-page.html" target="_self">Home</a>
     <a>Menu</a>
@@ -24,7 +24,7 @@
   </div>
 
   <!-- Navbar -->
-  <div class="container-fluid sticky bottom-border" id="customNav">
+  <div class="container-fluid sticky" id="customNav">
     <div class="btn" onclick="menuAnimation(this); changeNav()" role="button">
       <div class="bar1"></div>
       <div class="bar2"></div>
@@ -37,6 +37,181 @@
   </div>
 
   <div id="main">
+    <!-- Tab links -->
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Pizza')" id="defaultOpen">Pizza</button>
+      <button class="tablinks" onclick="openTab(event, 'Drinks')">Drinks</button>
+      <button class="tablinks" onclick="openTab(event, 'Other')">Other</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Pizza" class="tabcontent">
+      <div class="row" style="text-align:left;font-size:17px;margin:20px;line-height:60%">
+        <div class="col-md-6">
+          <p class="font-weight-bold">Cheese Pizza <span style="float:right">18.0</span></p>
+          <p class="font-italic">8 Slices of Cheese<p>
+          </br>
+          <p class="font-weight-bold">Assorted Pizza <span style="float:right">20.0</span></p>
+          <p class="font-italic">8 Slices of your Choice<p>
+          </br>
+          <p class="font-weight-bold">Cheese Slice <span style="float:right">2.5</span></p>
+          <p class="font-italic">Cheese, Marinara<p>
+          </br>
+          <p class="font-weight-bold">Pepperoni Slice <span style="float:right">3.0</span></p>
+          <p class="font-italic">Pepperoni, Cheese, Marinara<p>
+          </br>
+          <p class="font-weight-bold">Pepperoni Sausage Slice <span style="float:right">3.0</span></p>
+          <p class="font-italic">Sausage, Pepperoni, Cheese, Marinara<p>
+          </br>
+          <p class="font-weight-bold">Meatlovers Slice <span style="float:right">3.5</span></p>
+          <p class="font-italic">Bacon, Sausage, Pepperoni, Cheese, Marinara<p>
+          </br>
+          <p class="font-weight-bold">Crime Scene Slice <span style="float:right">4.0</span></p>
+          <p class="font-italic">Meatball Slices, Ricotta Cheese Scoops, Marinara<p>
+          </br>
+          <p class="font-weight-bold">Pizza Slice Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Ingredients<p>
+        </div>
+        <div class="col-md-6">
+          <p class="font-weight-bold">Pizza Slice Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Pizza Slice Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Pizza Slice Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Pizza Slice Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Pizza Slice Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Pizza Slice Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Pizza Slice Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Pizza Slice Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Ingredients<p>
+        </div>
+      </div>
+    </div>
+
+    <div id="Drinks" class="tabcontent">
+      <div class="row" style="text-align:left;font-size:17px;margin:20px;line-height:60%">
+        <div class="col-md-6">
+          <p class="font-weight-bold">Fountain Drink <span style="float:right">1.5</span></p>
+          <p class="font-italic">Coke, Diet Coke, Sprite, A&W Root Beer, Raspberry Brisk<p>
+          </br>
+          <p class="font-weight-bold">Rootbeer Float <span style="float:right">5.0</span></p>
+          <p class="font-italic">A&W Rootbeer, Vanilla Ice Cream, Whipped Cream<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+        </div>
+        <div class="col-md-6">
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+        </div>
+      </div>
+    </div>
+
+    <div id="Other" class="tabcontent">
+      <div class="row" style="text-align:left;font-size:17px;margin:20px;line-height:60%">
+        <div class="col-md-6">
+          <p class="font-weight-bold">Garlic Knot <span style="float:right">1.5</span></p>
+          <p class="font-italic">Pizza Dough, Garlic, Cheese, Parsley, Parmigiano-Reggiano<p>
+          </br>
+          <p class="font-weight-bold">Cheese Sticks <span style="float:right">2.0</span></p>
+          <p class="font-italic">Pizza Doug, Cheese<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+        </div>
+        <div class="col-md-6">
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+          </br>
+          <p class="font-weight-bold">Drink Name <span style="float:right">3.0</span></p>
+          <p class="font-italic">Description/Ingredients<p>
+        </div>
+      </div>
+    </div>
   </div>
+  <script>
+    document.getElementById("defaultOpen").click();
+  </script>
 </body>
 </html>
