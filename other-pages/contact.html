@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="../mystylesheet.css">
+  <link rel="stylesheet" href="../formstylesheet.css">
+  <link rel="stylesheet" href="otherpagesstylesheet.css">
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -13,7 +15,7 @@
   <script src="../scripts.js"></script>
 </head>
 
-<body>
+<body style="background-color:#f1f1f1">
   <div id="mySidenav" class="sidenav right-border" style="z-index:9999">
     <br />
     <a href="../home-page.html" target="_self">Home</a>
@@ -37,6 +39,89 @@
   </div>
 
   <div id="main">
+    <img class="bg-image" src="../photos/background-pizza2.jpg" alt="background image"/>
+    <div class="bg-text">
+      <div class="container-fluid" style="background-color:white">
+        <br />
+        <br />
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="text-dark">Phone</h1>
+            <p class="lead text-dark">
+              Call us at 858-123-4567 for any questions Pepe's related.
+            </p>
+            <!--<a href="other-pages/events.html" class="btn btn-info" role="button">Events</a>-->
+          </div>
+          <div class="col-md-4">
+            <h1 class="text-dark">Email</h1>
+            <p class="lead text-dark">
+              You can reach us via email at <a>pepespizza@gmail.com</a>.
+            </p>
+            <!--<a href="other-pages/menu.html" class="btn btn-info" role="button">Menu</a>-->
+          </div>
+          <div class="col-md-4">
+            <h1 class="text-dark">Stop By</h1>
+            <p class="lead text-dark">
+              Or you could always stop by and at our location, and we'll we able to
+              answer any and all your questions regarding Pepe's Pizza.
+              <a href="other-pages/delivery.html">delivery page</a>.
+              </a>
+            </p>
+            <!--<a href="other-pages/delivery.html" class="btn btn-info" role="button">Delivery</a>-->
+          </div>
+        </div>
+        <br />
+        <br />
+      </div>
+
+      <div class="container" style="background-color:black">
+        <br />
+        <br />
+        <div class="row">
+          <div class="col-md-8 text-light">
+            <h1>Stay up to date with Pepe's Pizza <h1>
+            <br />
+            <p class="lead">Sign for our newletter to be first to hear about everything
+              Pepe's Pizza.
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+            <div id="id01" class="modal">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Form">&times;</span>
+              <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+                  <hr>
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+
+                  <label for="psw-repeat"><b>Repeat Password</b></label>
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+
+                  <p>By creating an account you agree to our <a href="other-pages/terms-and-privacy.html" target="_blank" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+      </div>
+    </div>
   </div>
 </body>
 </html>
