@@ -1,4 +1,0 @@
-- scale menu button
-- change photos
-- other pages (update navbar and add content)
-- customize reviews bar
